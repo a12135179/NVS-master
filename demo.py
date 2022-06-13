@@ -99,7 +99,7 @@ while RGB_test.isOpened():
     T_ret, T_frame = T_test.read()
     f_ret, f_frame = fusion_test.read() 
     if not RGB_ret or not T_ret or not f_ret:
-        print('no video')
+        print('no video and FINISH')
         break
     sized_RGB = cv2.resize(RGB_frame, (RGB.width, RGB.height))
     sized_RGB = cv2.cvtColor(sized_RGB, cv2.COLOR_BGR2RGB)
